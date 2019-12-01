@@ -1,0 +1,28 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 2px solid black;
+  
+    li {
+      display: flex;
+      flex-direction: column;
+  
+      ul {
+        li {
+          width: 2rem;
+          height: 2rem;
+          border: 1px solid black;
+          cursor: pointer;
+        }
+  
+        display: flex;
+        flex-direction: row;
+      }
+  
+      &:nth-child(odd) ul li:nth-child(even), 
+      &:nth-child(even) ul li:nth-child(odd) {
+        background: black;
+      }
+    }
+}
