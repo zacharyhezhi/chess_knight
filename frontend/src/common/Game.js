@@ -45,10 +45,8 @@ class Game extends React.Component {
         const knightNode = new Node(knight[0], knight[1]);
         const destNode = new Node(destination[0], destination[1]);
         const steps = chess.calcSteps(knightNode, destNode);
-        console.log(steps);
         //steps is an array, e.g [{0,1}, {1,2}]
         // map out all elements in steps in board   
-        // let steps = [{x: 0, y: 1}, {x: 1,y: 2}, {x: 2, y: 3}];
         let count = 0;
         const self = this;
         function myTimer() {

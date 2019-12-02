@@ -1,0 +1,30 @@
+@import-normalize;
+
+
+main {
+  margin:auto;
+  margin-top:10rem;
+  width: 16rem;
+
+  section {
+    margin: 1rem 0;
+  }
+}
+
+button {
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 6rem;
+  height: 2rem;
+  font-size: 1rem;
+  margin-right: 1rem;
+  text-transform: capitalize;
+
+  &.primary {
+    background-color: green;
+  }
+
+  &.secondary {
+    background-color: lightblue;
+  }
+}
