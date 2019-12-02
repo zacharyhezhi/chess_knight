@@ -7,7 +7,7 @@ class Chess {
       }
     
       valid(x, y) {
-        if (x < 0 || y < 0 || x >= this.n || y >= this.n) return false;
+        if (x < 0 || y < 0 || x > this.n || y > this.n) return false;
         return true;
       }
     
