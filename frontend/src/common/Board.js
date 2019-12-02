@@ -21,7 +21,6 @@ class Board extends React.Component {
     }
 
     isKnight = (x, y) => {
-      // console.log(this.props.knight);
       const { knight } = this.props;
       return x === knight[0] && 
              y === knight[1] && 
@@ -83,8 +82,6 @@ class Board extends React.Component {
 
     render() {
         const { boardElements } = this.state;
-        const { knight, destination } = this.props;
-        console.log(knight, destination);
         return (
           <ul>
             {boardElements.map(x => 

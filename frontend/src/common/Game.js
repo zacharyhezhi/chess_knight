@@ -31,9 +31,7 @@ class Game extends React.Component {
     }
 
     move = (x,y) => {
-        console.log(x,y);
         this.setState({
-
             knight:[x, y]
         })
     }
@@ -51,7 +49,6 @@ class Game extends React.Component {
         const self = this;
         function myTimer() {
         //call move function to next step
-            console.log(`move to step ${count}`, steps[count],steps[count].x);
             self.move(steps[count].x, steps[count].y) ;
             count++;
             if(count >= steps.length) {
