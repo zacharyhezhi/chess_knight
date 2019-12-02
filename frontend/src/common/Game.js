@@ -39,7 +39,7 @@ class Game extends React.Component {
     help = () => {
         //find steps to destination and return all steps
         const { knight, destination} = this.state;
-        const chess = new Chess();
+        const chess = new Chess(8);
         const knightNode = new Node(knight[0], knight[1]);
         const destNode = new Node(destination[0], destination[1]);
         const steps = chess.calcSteps(knightNode, destNode);

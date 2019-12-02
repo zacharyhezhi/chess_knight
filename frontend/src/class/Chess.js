@@ -7,8 +7,8 @@ class Chess {
       }
     
       valid(x, y) {
-        if (x < 0 || y < 0 || x > this.n || y > this.n) return false;
-        return true;
+        if (x < 0 || y < 0 || x >= this.n || y >= this.n) return false;
+          return true;
       }
     
       printPath(node) {
@@ -26,9 +26,10 @@ class Chess {
         let visited = [];
         const row = [2, 2, -2, -2, 1, 1, -1, -1];
         const col = [-1, 1, 1, -1, 2, -2, 2, -2];
+        let currentNode = null;
   
         while(queue.length > 0) {
-          const currentNode = queue.shift();
+          currentNode = queue.shift();
           
           if(currentNode.x === destination.x && currentNode.y === destination.y){
             this.printPath(currentNode);
