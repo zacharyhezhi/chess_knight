@@ -59,7 +59,7 @@ class Game extends React.Component {
             }
         }
 
-        var myInterval = setInterval(myTimer, 1000);
+        const myInterval = setInterval(myTimer, 1000);
 
     }
 

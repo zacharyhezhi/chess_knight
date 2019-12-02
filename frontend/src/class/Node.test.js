@@ -1,4 +1,4 @@
-import Node from '../class/Node';
+import Node from './Node';
 
 describe("Test Node class", () => {
  it("should generate a node instance", () => {
