@@ -46,8 +46,22 @@ class Game extends React.Component {
         const destNode = new Node(destination[0], destination[1]);
         const steps = chess.calcSteps(knightNode, destNode);
         console.log(steps);
-        //TODO steps is an array, e.g [{0,1}, {1,2}]
+        //steps is an array, e.g [{0,1}, {1,2}]
         // map out all elements in steps in board   
+        // let steps = [{x: 0, y: 1}, {x: 1,y: 2}, {x: 2, y: 3}];
+        let count = 0;
+        const self = this;
+        function myTimer() {
+        //call move function to next step
+            console.log(`move to step ${count}`, steps[count],steps[count].x);
+            self.move(steps[count].x, steps[count].y) ;
+            count++;
+            if(count >= steps.length) {
+            clearInterval(myInterval);
+            }
+        }
+
+        var myInterval = setInterval(myTimer, 1000);
 
     }
 
